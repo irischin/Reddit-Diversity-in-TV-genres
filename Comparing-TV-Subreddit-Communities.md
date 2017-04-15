@@ -51,7 +51,7 @@ Here, we'll use the `entropy` package to calculate the entropy for each author/u
 tvsubs_entropy<-apply(tvsubs_sum_w[,-1], 1, entropy::entropy)
 ```
 
-<img src="figures/histogram of entropy-1.png" style="display: block; margin: auto;" />
+<img src="fComparing-TV-Subreddit-Communities_files/figure-markdown_github/histogram of entropy-1.png" style="display: block; margin: auto;" />
 
 As one can see, while there is good number of people who show some diversity in their TV preference, there is also a substantial amount of people who only comment in only one genre (i.e., those who have an entropy score of 0). So let's focus our first follow-up analysis on these individuals.
 
@@ -111,11 +111,11 @@ Zero_ers_sum_df<-data.frame(genre_id, entropy_sum)
 
 Here is the histogram of entropy scores for each genre. Notice, here I'm plotting the *frequency* of individuals that fall within particular entropy bins.
 
-<img src="figures/not normalized plot-1.png" style="display: block; margin: auto;" />
+<img src="Comparing-TV-Subreddit-Communities_files/figure-markdown_github/not normalized plot-1.png" style="display: block; margin: auto;" />
 
 Here is another histogram of entropy scores for each genre. However, here, you'll notice that this plots the *proportion* of individuals that fall within the particular entropy bins. This is to account for the fact that the four genres differ in the number of individuals who are "one-genrers."
 
-<img src="figures/nomralized plot-1.png" style="display: block; margin: auto;" />
+<img src="Comparing-TV-Subreddit-Communities_files/figure-markdown_github/nomralized plot-1.png" style="display: block; margin: auto;" />
 
 Examining these histograms, it appears that while a large number of individuals are commenting on a couple shows of their preferred genre, there are nonetheless a substantial number of individuals who comment across multiple shows. So, like the overall pattern we found *across* genres, *within* a particular genre we see individuals who stick to a couple shows as well as a group of individuals showing more (although not overwhelming) diversity in their TV taste.
 
