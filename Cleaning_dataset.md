@@ -37,7 +37,7 @@ bot_list<-unique(grep("(?<!ro)bot$", tolower(tv_subs_users$author), perl=T, valu
 tv_subs_users<-subset(tv_subs_users, !(author %in% bot_list))
 ```
 
-For our later analyses, we will need to know which genre the different shows belong in so we should merge our current dataset with the table containing this information. (Note: to see how I generated this table, please refer to my `Extracting Television Subreddits` script.)
+For our later analyses, we will need to know which genre the different shows belong in so we should merge our current dataset with the table containing this information. (Note: to see how I generated this table, please refer to my `Extracting_ Television_Subreddits.py` script.)
 
 ``` r
 show_descrip<-read.table("television_subreddit_id.csv", sep=",", header=T)
@@ -55,7 +55,7 @@ tv_subs_users<-tv_subs_users %>%
 
 Okay, on to more cleaning!
 
-Let's try to focus on reasonably sized subreddits, as a particularly small subreddit community might not be that informative. How does one decide what is considered "reasonably sized"? There are of course many different ways you can do this and you may disagree with the method and criteria that I have selected!
+Let's try to focus on reasonably sized subreddits, as the activity of a particularly small subreddit community might not be that informative. How does one decide what is considered "reasonably sized"? There are of course many different ways you can do this and you may disagree with the method and criteria that I have selected!
 
 I first looked at the size of the subreddit based on the number of comments made in total. Television reddits often have discussion threads for each episode. This is not to say that users don't comment on other things regarding a TV show but my experience is that it is in these discussion threads that most of the commenting happens. A typical season in a television show can range somewhere from 13-20 episodes and given that we have about 2 years worth of comments, we might expect 26-40 episode discussion threads from a subreddit. We might then want to decide that at least 200 comments in a thread is considered a "good size" (again, this number is somewhat arbitrary). This would mean a reasonably sized/active subreddit should have a total of at least 200\*26 (i.e., 5200) comments. I therefore used this number as a cut-off mark.
 
