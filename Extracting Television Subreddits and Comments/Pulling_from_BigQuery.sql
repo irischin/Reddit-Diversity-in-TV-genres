@@ -1,5 +1,5 @@
 #Selects all comments made on relevant tv subreddits between Jan. 2015 to Feb. 2017 from the data extracted by /u/Stuck_In_the_Matrix and hosted by /u/fhoffa on BigQuery.
-#The relevant tv subreddits are listed in another BigQuery table that I created and uploaded.
+#The table listing out the relevant tv subreddits are in another BigQuery table that I created and uploaded.
 #See Extracting_Television_Subreddits.py for code on how I complied that table.
 
 SELECT author, subreddit, subreddit_id, COUNT(body) AS num_comments 
