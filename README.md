@@ -12,3 +12,6 @@ This directory contains code for my investigations into how diverse people's TV 
 | Cleaning\_dataset.md                                 | R Markdown file detailing how I cleaned the data after I collected it from BigQuery                                                                                               |
 | Comparing-TV-Subreddit-Communities.md                | R Markdown file detailing the different analyses I performed to investigate the question regarding diversity in TV taste                                                          |
 | Figures folder                                       | Contains the figures in `Comparing-TV-Subreddit-Communities.md`                                                                                                                   |
+
+
+For a more detailed write up of the analyses, please visit: https://irischinresearch.wordpress.com/2017/04/16/how-diverse-are-peoples-tv-tastes/
